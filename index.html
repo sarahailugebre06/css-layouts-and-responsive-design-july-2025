@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS Layout with Hamburger Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Responsive Web Design Demo</h1>
+    <p>Mobile-first design with Flexbox & Grid</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main layout using Grid -->
+  <main class="main-grid">
+    <!-- Content -->
+    <section class="content">
+      <h2>Main Content</h2>
+      <p>This is the primary content area. Resize your browser to see the responsive layout.</p>
+      <div class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <ul>
+        <li>Link A</li>
+        <li>Link B</li>
+        <li>Link C</li>
+        <li>Link D</li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Responsive Design Assignment</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

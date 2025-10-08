@@ -1,0 +1,165 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  line-height: 1.6;
+  background-color: #f3f4f6;
+  color: #111827;
+  padding: 10px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e40af;
+  border-radius: 6px;
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-links li {
+  border-top: 1px solid #3b82f6;
+}
+
+.nav-links li:first-child {
+  border-top: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+/* Main layout (mobile: single column) */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Content */
+.content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #93c5fd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* --- Tablet & up --- */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* hide hamburger */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    border: none;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
+  }
+
+  .main-grid {
+    grid-template-columns: 3fr 1fr; /* content + sidebar */
+  }
+
+  .cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* --- Desktop & up --- */
+@media (min-width: 1024px) {
+  .main-grid {
+    gap: 30px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+}
